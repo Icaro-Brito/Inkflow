@@ -18,5 +18,4 @@ public class Cliente {
     private Endereco endereco;
     private List<Agendamento> agendamentos = new ArrayList<>();
 
-
     }
