@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/clientes")
 public class ClientesController {
@@ -17,14 +18,17 @@ public class ClientesController {
     public List<Cliente> carregar() {
         return clienteService.carregar();
     }
+
     @PostMapping
     public List<Cliente> salvar(@RequestBody Cliente cliente) {
         return clienteService.adicionarCliente(cliente);
     }
+
     @PutMapping("/{id}")
     public List<Cliente> atualizar(@RequestBody Cliente cliente, @PathVariable int id) {
         return clienteService.atualizarCliente(cliente);
     }
+
     @DeleteMapping("/{id}")
     public List<Cliente> deletar(@PathVariable int id) {
         return clienteService.removerCliente(id);
