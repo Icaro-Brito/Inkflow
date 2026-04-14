@@ -15,7 +15,9 @@ public class Agendamento {
     private BigDecimal valorPago; // eventualmente usar sum(Pagamentos)
     private LocalDateTime dataHora;
     private Cliente cliente;
+    private int clienteId;
     private Servico servico;
+    private int ServicoId;
     private StatusAgendamento statusAgendamento;
 
 }

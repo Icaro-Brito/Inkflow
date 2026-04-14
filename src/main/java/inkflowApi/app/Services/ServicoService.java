@@ -8,9 +8,18 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+
 @Service
 public class ServicoService {
-    private static final ObjectMapper mapper = new ObjectMapper();
+
+
+    public Servico getById(int id) {
+        List<Servico> servicos = carregar();
+        return servicos.stream()
+                .filter(x -> x.getId() == id).findFirst()
+                .orElseThrow(() -> new RuntimeException("Serviço com ID " + id + " não encontrado"));
+
+    }
 
     public List<Servico> carregar() {
         return JsonHelper.carregarJson(
