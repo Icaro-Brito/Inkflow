@@ -3,25 +3,16 @@ package inkflowApi.app.models.Dtos;
 import inkflowApi.app.models.Agendamento;
 import inkflowApi.app.models.Cliente;
 import inkflowApi.app.models.Servico;
+import lombok.Builder;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+@Builder
 public record AgendamentoDto(
          int id,
          BigDecimal valor,
-         BigDecimal valorPago, // eventualmente usar sum(Pagamentos)
+         BigDecimal valorPago,
          LocalDateTime dataHora,
-         String clienteNome,
-         String servicoNome) {
-    public static AgendamentoDto fromEntity(Agendamento entity) {
-        return new AgendamentoDto(
-                entity.getId(),
-                entity.getValor(),
-                entity.getValorPago(),
-                entity.getDataHora(),
-                entity.getCliente() != null ? entity.getCliente().getNome() : "N/A",
-                entity.getServico() != null ? entity.getServico().getNome() : "N/A"
-        );
-    }
-}
+         ClienteDto cliente,
+         String servicoNome) { }

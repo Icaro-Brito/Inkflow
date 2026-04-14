@@ -2,7 +2,9 @@ package inkflowApi.app.models.Dtos;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
+import lombok.Builder;
 
+@Builder
 public record ClienteDto(
         @NotNull int id,
         String nome,

@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import inkflowApi.app.Helpers.JsonHelper;
 import inkflowApi.app.models.Cliente;
+import inkflowApi.app.models.Servico;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
@@ -15,6 +16,13 @@ import java.util.List;
 public class ClienteService {
     private static final ObjectMapper mapper = new ObjectMapper();
 
+    public Cliente getById(int id) {
+        List<Cliente> clientes = carregar();
+        return clientes.stream()
+                .filter(x -> x.getId() == id).findFirst()
+                .orElseThrow(() -> new RuntimeException("Cliente com ID " + id + " não encontrado"));
+
+    }
 
     public List<Cliente> carregar() {
         return JsonHelper.carregarJson(
