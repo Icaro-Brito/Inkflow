@@ -1,0 +1,21 @@
+name: Deploy Database to Aiven
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - 'database/schema.sql' # O código só roda quando você alterar este arquivo
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install MySQL Client
+        run: sudo apt-get update && sudo apt-get install -y mysql-client
+
+      - name: Execute SQL Script
+        run: |
+          mysql -h ${{ secrets.DB_HOST }} -P ${{ secrets.DB_PORT }} -u ${{ secrets.DB_USER }} -p${{ secrets.DB_PASSWORD }} ${{ secrets.DB_NAME }} < database/schema.sql
