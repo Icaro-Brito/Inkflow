@@ -12,21 +12,25 @@
 <body>
     <header>
         <nav>
-    <div class="logo">INK<span>FLOW</span></div>
-    <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="agendamento.html">Agendar</a></li>
-        <li><a href="servicos.html">Serviços</a></li>
-    </ul>
-</nav>
+            <div class="logo">INK<span>FLOW</span></div>
+            <ul id="menu-nav">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="login.html">Agendar</a></li>
+                <li><a href="#Servicos">Serviços</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
         <section class="hero">
             <div class="hero-content">
                 <h1>Sua Pele, nossa arte.</h1>
-                <p>Agende seus com os melhores tatuadores da região de forma rápida e simples.</p>
-                <a href="agendamento.html" class="btn-main">Quero Agendar</a>
+                <p>Agende com os melhores tatuadores da região de forma rápida e simples.</p>
+                
+                <div id="botoes-dinamicos" style="margin-top: 30px; display: flex; gap: 15px; justify-content: center;">
+                    <a href="login.html" class="btn-main">Fazer Login</a>
+                    <a href="cadastro.html" class="btn-main" style="background-color: transparent; border: 2px solid #e1b12c; color: #e1b12c;">Criar Conta</a>
+                </div>
             </div>
         </section>
 
@@ -47,7 +51,6 @@
                     <h3>Realismo</h3>
                     <p>Retratos e artes que parecem verdadeiras fotografias na pele.</p>
                 </div>
-
             </div>
         </section>
     </main>
@@ -55,6 +58,7 @@
     <footer>
         <p>&copy; 2026 Inflow Studio - Squad 4 ADS</p>
     </footer>
-    
+
+    <script src="js/script.js"></script>
 </body>
 </html>

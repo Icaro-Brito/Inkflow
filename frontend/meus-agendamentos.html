@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inkflow | Minha Agenda</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">INK<span>FLOW</span></div>
+            <ul id="menu-nav">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="dashboard.html">Tatuadores</a></li>
+                <li><a href="meus-agendamentos.html">Minha Agenda</a></li>
+                <li><a href="javascript:void(0)" onclick="deslogar()">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="services">
+        <h2>Meus Agendamentos</h2>
+        <p>Confira abaixo suas sessões marcadas:</p>
+
+        <div id="lista-cards" class="card-container">
+            <p id="msg-vazia">Você ainda não tem agendamentos marcados.</p>
+        </div>
+        
+        <div style="margin-top: 40px; text-align: center;">
+            <a href="index.html" class="btn-main" style="background-color: transparent; border: 2px solid #e1b12c; color: #e1b12c;">Voltar ao Início</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Inflow Studio - Squad 4 ADS</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

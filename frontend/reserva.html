@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inkflow | Reservar Horário</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">INK<span>FLOW</span></div>
+            <ul id="menu-nav">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="dashboard.html">Tatuadores</a></li>
+                <li><a href="meus-agendamentos.html">Minha Agenda</a></li>
+                <li><a href="javascript:void(0)" onclick="deslogar()">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="booking-container">
+            <h2>Detalhes da Tattoo</h2>
+            <form id="formReserva">
+                <div class="input-group">
+                    <label>Tatuador Selecionado</label>
+                    <input type="text" id="tatuador-selecionado" readonly style="background: #333; color: #e1b12c; font-weight: bold; border: 1px solid #444;">
+                </div>
+
+                <div class="input-group">
+                    <label for="estilo">Estilo da Arte</label>
+                    <select id="estilo" style="width: 100%; padding: 15px; background: #2a2a2a; border: 1px solid #444; border-radius: 10px; color: white;">
+                        <option value="Blackwork">Blackwork</option>
+                        <option value="Fineline">Fineline</option>
+                        <option value="Realismo">Realismo</option>
+                        <option value="Old School">Old School</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="data">Data do Agendamento</label>
+                    <input type="date" id="data" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="descricao">Ideia da Tattoo (Tamanho/Local)</label>
+                    <textarea id="descricao" rows="4" style="width: 100%; padding: 15px; background: #2a2a2a; border: 1px solid #444; border-radius: 10px; color: white; resize: none;" placeholder="Ex: Antebraço, 15cm..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-main">Confirmar Agendamento</button>
+            </form>
+            
+            <div style="margin-top: 20px; text-align: center;">
+                <a href="dashboard.html" style="color: #ccc; text-decoration: none; font-size: 0.9rem;">← Voltar para Tatuadores</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Inflow Studio - Squad 4 ADS</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inkflow | Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">INK<span>FLOW</span></div>
+            <ul id="menu-nav">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cadastro.html">Cadastrar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="booking-container">
+            <h2>Entrar no Studio</h2>
+            <form id="formLogin" autocomplete="off">
+                <div class="input-group">
+                    <label for="login-nome">Nome de Usuário</label>
+                    <input type="text" id="login-nome" required autocomplete="username">
+                </div>
+
+                <div class="input-group">
+                    <label for="login-senha">Senha</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="login-senha" required autocomplete="current-password">
+                        <span id="togglePasswordLogin" class="eye-icon" style="cursor: pointer;">👁️</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-main">Acessar Agenda</button>
+            </form>
+            
+            <p style="margin-top: 20px; font-size: 0.9rem; text-align: center;">
+                Ainda não tem conta? <a href="cadastro.html" style="color: #e1b12c; text-decoration: none;">Crie sua conta aqui</a>
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Inflow Studio - Squad 4 ADS</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

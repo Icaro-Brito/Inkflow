@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Inkflow | Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">INK<span>FLOW</span></div>
+            <ul id="menu-nav">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="dashboard.html">Tatuadores</a></li>
+                <li><a href="meus-agendamentos.html">Minha Agenda</a></li> 
+                <li><a href="javascript:void(0)" onclick="deslogar()">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="services">
+        <h2>Bem-vindo, <span id="nome-cliente" style="color: #e1b12c;"></span>!</h2>
+        <p>Escolha o artista para sua próxima obra:</p>
+
+        <div class="card-container">
+            <div class="card">
+                <div style="font-size: 3rem;">🤘</div> 
+                <h3>Vini Black</h3>
+                <p>Especialista em: <b>Blackwork e Old school</b></p>
+                <a href="reserva.html?tatuador=Vini" class="btn-main">Escolher este</a>
+            </div>
+
+            <div class="card">
+                <div style="font-size: 3rem;">🖋️</div>
+                <h3>Ana Line</h3>
+                <p>Especialista em: <b>Fineline</b></p>
+                <a href="reserva.html?tatuador=Ana" class="btn-main">Escolher esta</a>
+            </div>
+        </div>
+
+        <div class="card-container" style="margin-top: 20px;">
+            <div class="card">
+                <div style="font-size: 3rem;">🤘</div> 
+                <h3>Dan Real</h3>
+                <p>Especialista em: <b>Realismo</b></p>
+                <a href="reserva.html?tatuador=Dan" class="btn-main">Escolher este</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Inflow Studio - Squad 4 ADS</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inkflow | Agendamento</title>
+    <title>Inkflow | Cadastro</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -12,19 +13,19 @@
     <header>
         <nav>
             <div class="logo">INK<span>FLOW</span></div>
-            <ul>
+            <ul id="menu-nav">
                 <li><a href="index.html">Início</a></li>
-                <li><a href="agendamento.html">Agendar</a></li>
+                <li><a href="login.html">Agendar</a></li>
             </ul>
         </nav>
     </header>
 
     <div class="booking-container">
         <h2>Crie sua Conta</h2>
-        <form id="formCadastro">
+        <form id="formCadastro" autocomplete="off">
             <div class="input-group">
                 <label>Nome</label>
-                <input type="text" id="nome" required>
+                <input type="text" id="nome" required autocomplete="new-username">
             </div>
 
             <div class="input-group">
@@ -33,10 +34,10 @@
             </div>
 
             <div class="input-group">
-                <Label for="senha">Senha</Label>
+                <label for="senha">Senha</label>
                 <div class="password-wrapper">
-                    <input type="password" id="senha" maxlength="8" required>
-                    <span id="togglePassword" class="eye-icon">👁️</span>
+                    <input type="password" id="senha" maxlength="8" required autocomplete="new-password">
+                    <span id="togglePassword" class="eye-icon" style="cursor: pointer;">👁️</span>
 
                     <span class="password-tooltip">
                         A senha deve ter exatamente 8 dígitos, incluindo: 
@@ -50,6 +51,10 @@
         </form>
         
         <div id="mensagem"></div>
+
+        <p style="margin-top: 20px; font-size: 0.9rem; text-align: center; color: white;">
+            Já tem uma conta? <a href="login.html" style="color: #e1b12c; text-decoration: none;">Faça login aqui</a>
+        </p>
     </div>
 
     <script src="js/script.js"></script>
